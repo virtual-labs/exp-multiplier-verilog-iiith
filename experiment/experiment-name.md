@@ -1,1 +1,1 @@
-## Experiment name
+## Design of a Multiplier using Verilog
