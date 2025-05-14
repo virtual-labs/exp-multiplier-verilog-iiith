@@ -1,29 +1,91 @@
-## Modules Required -
+> **Important Note:** This simulation is designed for desktop view only. For the best experience, please use a desktop monitor with a minimum resolution of 1280x720 pixels. The simulation may not function properly on smaller screens like mobile devices or tablets.
 
-- Verilog Module
-- Verilog Test bench
+### 1. Understanding the Simulation
 
-## Code -
+This simulation helps you learn about Multiplier implementation in Verilog:
 
-### Verilog Module -  
+- **Multiplier Design:** A combinational circuit that performs multiplication of two input values.
+- The multiplier takes two inputs (A and B) and produces their product as output (Out).
+- It demonstrates combinational logic behavior using assign statements.
+- The output Out represents the product: Out = A × B
 
-- The code block that defines inputs, outputs, module name should be placed first, followed by the code block that defines the module functionality and then finally the end of module block.
-- Drag and drop the code blocks to arrange them in the order mentioned above.
-- Now enter a name for the verilog module. Make sure that the name begins with alphabets and can only include alphanumeric characters and '_' character without any spaces or other special characters in between.
-- Select the inputs as A, B and the output as Out.
-- Now, to define the functionality of the module, the assign block has to be filled.The Out must be the product of A, B.
-- Fill in the LHS and RHS of the assignment accordingly keeping in mind what value sould be assigned to whom.
-- The assignment operator must be selected as '=' and not '<>=' because for a sequential storage behaviour, we always need to select the non-blocking assignment operator (<=) and not for combinational.
+### 2. Getting Started
 
-### Verilog Test Bench -
+1. Enter your module name and testbench name in the respective fields:
+   - Module names must follow [Verilog naming conventions](https://www.chipverify.com/verilog/verilog-syntax).
+   - Only letters, numbers, and underscores are allowed (no hyphens or special characters).
+   - Testbench name must end with '_tb'.
 
-- The code block that defines test bench name should be placed first, followed by the code block that declares input, output registers and wires, then the block that instantiates the Multiplier module, then the blocks that define the input waves and finally the end of module block.
-- Drag and drop the code blocks to arrange them in the order mentioned above.
-- Now enter a name for the verilog test bench. Make sure that the name begins with alphabets and can only include alphanumeric characters and '_' character without any spaces or other special characters in between and it does not match with the verilog module name you have entered earlier.
-- Then declare A,B as registers and Out as a wire. 
-- Now instantiate the module by entering the name of the verilog module you have earlier coded. Select the arguments in the same order as you have chosen in the Multiplier module. The order in which you give the arguments here, the inputs and outputs will be used in the same order in the module.
+### 3. Building the Verilog Module
 
-## Observations -
+1. In the first column, arrange the code blocks in the correct order by dragging and dropping them:
+   - The code block that defines inputs, outputs, and module name should be placed first
+   - Followed by the code block that defines the module functionality
+   - Finally, the end of module block
 
-- On clicking "validate" option after completing the code (assuming everything is filled correctly) you should see a "Success" message and a truth table for the inputs wave you have selected, under the observations section.
-- Observe the fluctuations in input wave and the corresponding expected and observed output wave.
+2. Select the appropriate signals:
+   - Inputs: A, B (values to be multiplied)
+   - Output: Out (product result)
+
+3. Define the functionality using the assign statement:
+   - The Out must be assigned the product of A and B
+   - Fill in the LHS and RHS of the assignment keeping in mind what value should be assigned to whom
+   - The assignment operator must be '=' (not '<=') because for combinational logic, we use blocking assignment (=)
+
+### 4. Creating the Testbench
+
+1. In the second column, arrange the testbench code blocks in the correct order:
+   - Testbench name definition
+   - Signal declarations (reg for inputs, wire for outputs)
+   - Module instantiation
+   - Input wave definitions
+   - End of module
+
+2. Define the testbench signals:
+   - `reg A, B; wire Out`
+
+3. Connect the ports correctly in the module instantiation:
+   - Enter the name of the verilog module you have earlier coded
+   - Select the arguments in the same order as you have chosen in the Multiplier module
+   - Ensure proper mapping: inputs A, B and output Out
+   - **Important:** Maintain correct order - the order you give arguments here will be used in the same order in the module
+
+### 5. Validation and Observation
+
+1. Click the "Validate" button to check your code.
+2. The observation column will show:
+   - Error messages in red if there are mistakes. Refer to the [Troubleshooting](#6-troubleshooting) section below for dealing with the Error messages.
+   - A truth table for the input waves you have selected if the code is correct.
+3. If you need to start over, click the "Reset" button to shuffle the code blocks.
+
+#### Verilog Syntax Reference
+
+- For detailed Verilog syntax rules, refer to the [Verilog Syntax Guide](https://www.chipverify.com/verilog/verilog-syntax).
+- For module and testbench examples, visit [ASIC World Verilog Tutorial](https://www.asic-world.com/verilog/veritut.html).
+
+### 6. Troubleshooting
+
+If you see error messages, carefully check:
+
+- Module and testbench names follow the naming rules.
+- Code blocks are in the correct order.
+- A and B are properly declared as inputs, Out as output.
+- The assign statement correctly implements the multiplication (Out = A * B).
+- Blocking assignment (=) is used for combinational logic.
+- Port connections are properly defined in the module instantiation.
+
+Additional tips:
+
+- Use the Reset button to start fresh if needed.
+- Observe the fluctuations in input waves and corresponding expected and observed output wave.
+- Verify the multiplier behavior produces correct multiplication results for all input combinations.
+
+#### Important Reminders
+
+- Verilog is case-sensitive.
+- All signals must be properly declared before use.
+- Testbench signals must match the module ports.
+- Code blocks must be in the correct order for the simulation to work.
+- Use blocking assignment (=) for combinational logic with assign statements.
+- The multiplication operation should be correctly implemented using the * operator.
+- Ensure proper port order in module instantiation to match the module definition.
