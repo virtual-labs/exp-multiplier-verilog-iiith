@@ -10,10 +10,10 @@
         "d": "To create 3D animations"
       },
       "explanations": {
-        "a": "Verilog is a hardware description language used to describe electronic systems.",
-        "b": "Incorrect, Verilog is not used for writing web applications.",
-        "c": "Incorrect, Verilog is not used for designing mechanical structures.",
-        "d": "Incorrect, Verilog is not used for creating 3D animations."
+        "a": "Correct! Verilog is a hardware description language used to describe electronic systems.",
+        "b": "Incorrect. Verilog is not used for writing web applications.",
+        "c": "Incorrect. Verilog is not used for designing mechanical structures.",
+        "d": "Incorrect. Verilog is not used for creating 3D animations."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -27,10 +27,10 @@
         "d": "To perform logical AND operation on two 2-bit numbers"
       },
       "explanations": {
-        "a": "Incorrect, a 2-bit Multiplier is used for multiplication, not addition.",
-        "b": "Correct, a 2-bit Multiplier is used to multiply two 2-bit numbers.",
-        "c": "Incorrect, a 2-bit Multiplier is used for multiplication, not division.",
-        "d": "Incorrect, a 2-bit Multiplier performs multiplication, not logical AND operation."
+        "a": "Incorrect. A 2-bit Multiplier is used for multiplication, not addition.",
+        "b": "Correct! A 2-bit Multiplier is used to multiply two 2-bit numbers.",
+        "c": "Incorrect. A 2-bit Multiplier is used for multiplication, not division.",
+        "d": "Incorrect. A 2-bit Multiplier performs multiplication, not logical AND operation."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -44,10 +44,10 @@
         "d": "Loop structures"
       },
       "explanations": {
-        "a": "Incorrect, 'always' block doesn't specifically define sequential logic.",
-        "b": "Incorrect, 'always' block doesn't specifically define combinational logic.",
-        "c": "Correct, the 'always' block is used for behavioral modeling in Verilog.",
-        "d": "Incorrect, Verilog 'always' block is not used for loop structures."
+        "a": "Incorrect. 'always' block can define both sequential and combinational logic.",
+        "b": "Incorrect. 'always' block can define both sequential and combinational logic.",
+        "c": "Correct! The 'always' block is used for behavioral modeling in Verilog.",
+        "d": "Incorrect. Verilog 'always' block is not used for loop structures."
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
@@ -61,10 +61,10 @@
         "d": "A net for connecting components"
       },
       "explanations": {
-        "a": "Incorrect, 'wire' is not specifically used to represent an input signal.",
-        "b": "Incorrect, 'wire' does not specifically represent a constant value.",
-        "c": "Incorrect, 'wire' does not represent a bidirectional signal in Verilog.",
-        "d": "Correct, 'wire' is a net used to connect components in Verilog."
+        "a": "Incorrect. 'wire' is not specifically used to represent an input signal.",
+        "b": "Incorrect. 'wire' does not specifically represent a constant value.",
+        "c": "Incorrect. 'wire' does not represent a bidirectional signal in Verilog.",
+        "d": "Correct! 'wire' is a net used to connect components in Verilog."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
@@ -78,10 +78,10 @@
         "d": "Flip-flops"
       },
       "explanations": {
-        "a": "Incorrect, registers may be used but are not the basic building blocks of a 2-bit Multiplier.",
-        "b": "Incorrect, adders and multipliers are used in a Multiplier but not the basic building blocks.",
-        "c": "Correct, logic gates are the fundamental building blocks used in designing a 2-bit Multiplier.",
-        "d": "Incorrect, flip-flops are not the primary building blocks for a 2-bit Multiplier."
+        "a": "Incorrect. Registers may be used but are not the basic building blocks of a 2-bit Multiplier.",
+        "b": "Incorrect. Adders and multipliers are used in a Multiplier but not the basic building blocks.",
+        "c": "Correct! Logic gates are the fundamental building blocks used in designing a 2-bit Multiplier.",
+        "d": "Incorrect. Flip-flops are not the primary building blocks for a 2-bit Multiplier."
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
@@ -95,10 +95,10 @@
         "d": "To define module instantiation"
       },
       "explanations": {
-        "a": "Correct, the 'generate' block is used to create hardware structures dynamically in Verilog.",
-        "b": "Incorrect, the 'generate' block doesn't generate random numbers.",
-        "c": "Incorrect, the 'generate' block is not used to execute procedural code.",
-        "d": "Incorrect, defining module instantiation is not the main purpose of the 'generate' block."
+        "a": "Correct! The 'generate' block is used to create hardware structures dynamically in Verilog.",
+        "b": "Incorrect. The 'generate' block doesn't generate random numbers.",
+        "c": "Incorrect. The 'generate' block is not used to execute procedural code.",
+        "d": "Incorrect. Defining module instantiation is not the main purpose of the 'generate' block."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
@@ -112,10 +112,10 @@
         "d": "Blocking assignments are used with numbers, non-blocking with strings."
       },
       "explanations": {
-        "a": "Incorrect, blocking and non-blocking assignments differ in their execution sequence.",
-        "b": "Incorrect, their usage is not specifically tied to combinational or sequential logic.",
-        "c": "Correct, blocking assignments enforce a sequence, non-blocking allow concurrent execution.",
-        "d": "Incorrect, blocking and non-blocking assignments are not limited to specific data types."
+        "a": "Incorrect. Blocking assignments occur sequentially while non-blocking assignments occur simultaneously.",
+        "b": "Incorrect. Their usage is not specifically tied to combinational or sequential logic.",
+        "c": "Correct! Blocking assignments enforce a sequence, non-blocking allow concurrent execution.",
+        "d": "Incorrect. Blocking and non-blocking assignments are not limited to specific data types."
       },
       "correctAnswer": "c",
       "difficulty": "advanced"
@@ -129,10 +129,10 @@
         "d": "Race condition is a design error that is irrelevant in Verilog."
       },
       "explanations": {
-        "a": "Incorrect, race conditions do not refer to competition between modules.",
-        "b": "Incorrect, this definition is not specific to the concept of race condition.",
-        "c": "Correct, a race condition is a conflict that occurs due to the sequence of operations in Verilog design.",
-        "d": "Incorrect, race conditions are significant in Verilog design as they can lead to design errors."
+        "a": "Incorrect. Race conditions do not refer to competition between modules.",
+        "b": "Incorrect. This definition is not specific to the concept of race condition.",
+        "c": "Correct! A race condition is a conflict that occurs due to the sequence of operations in Verilog design.",
+        "d": "Incorrect. Race conditions are significant in Verilog design as they can lead to design errors."
       },
       "correctAnswer": "c",
       "difficulty": "advanced"
@@ -146,10 +146,10 @@
         "d": "A list of module outputs for simulation observations"
       },
       "explanations": {
-        "a": "Incorrect, sensitivity list is not specifically related to testbench inputs.",
-        "b": "Correct, sensitivity list includes inputs that trigger the execution of the module.",
-        "c": "Incorrect, a sensitivity list is not a list of procedural statements.",
-        "d": "Incorrect, sensitivity list doesn't primarily involve module outputs for observation."
+        "a": "Incorrect. Sensitivity list is not specifically related to testbench inputs.",
+        "b": "Correct! Sensitivity list includes inputs that trigger the execution of the module.",
+        "c": "Incorrect. A sensitivity list is not a list of procedural statements.",
+        "d": "Incorrect. Sensitivity list doesn't primarily involve module outputs for observation."
       },
       "correctAnswer": "b",
       "difficulty": "advanced"
@@ -163,10 +163,10 @@
         "d": "RTL is an irrelevant concept in Verilog design."
       },
       "explanations": {
-        "a": "Correct, RTL describes the transfer of data between registers in hardware circuits.",
-        "b": "Incorrect, RTL is not specifically used for random testing.",
-        "c": "Incorrect, RTL doesn't define high-level behavior but rather the data transfer at a specific level.",
-        "d": "Incorrect, RTL is an essential concept in Verilog design for specifying hardware circuits."
+        "a": "Correct! RTL describes the transfer of data between registers in hardware circuits.",
+        "b": "Incorrect. RTL is not specifically used for random testing.",
+        "c": "Incorrect. RTL doesn't define high-level behavior but rather the data transfer at a specific level.",
+        "d": "Incorrect. RTL is an essential concept in Verilog design for specifying hardware circuits."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
