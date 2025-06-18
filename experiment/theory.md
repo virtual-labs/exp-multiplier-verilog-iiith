@@ -1,158 +1,175 @@
-This page provides an overview of Verilog, its significance, and practical examples of digital design using Verilog. We will explore three fundamental designs in this experiment:
-
-1. **T-Flip Flop**
-2. **Counter**
-3. **T-Flip Flop Using D-Flip Flop**
-
----
-
-Verilog is a hardware description language (HDL) developed to model electronic systems. It enables designers to describe the structure and behavior of digital circuits, facilitating simulation, synthesis, and verification. The modular nature of Verilog allows for efficient design, testing, and reuse of code.
-
----
-
-## 1. T-Flip Flop
-
-The Verilog code for a T-Flip Flop is shown below, accompanied by an explanation of its components:
-
-<p align="center">
-  <img src="images/t.jpg" alt="T-Flip Flop Verilog Code">
-</p>
-
-### Key Concepts
-
-- **Module:**  
-  A module is the fundamental building block in Verilog. It can represent a single element or a collection of lower-level design blocks. Modules encapsulate functionality and expose interfaces through input and output ports, allowing for abstraction and reuse.
-
-- **Module Name:**  
-  The module name is user-defined and is used to instantiate the module elsewhere in the design. Instantiation is demonstrated in the third example.
-
-- **Module Arguments:**  
-  Similar to function arguments in C, module arguments specify the input and output ports used for communication with other modules or the external environment.
-
-- **Input/Output Ports:**  
-  These ports facilitate data transfer into and out of the module. All arguments listed in the module declaration must be defined as either input or output within the module.
-
-- **Data Types:**  
-  In this example, the `reg` data type is used. Other data types, such as `wire`, will be introduced in subsequent examples. Refer to the chart below for an overview of Verilog data types:
-
-  <p align="center">
-    <img src="images/data.jpg" alt="Verilog Data Types">
-  </p>
-
-- **Always Block:**  
-  The `always` block contains statements that execute repeatedly, triggered by changes in specified signals (e.g., clock or reset).
-
-- **Posedge Clock:**  
-  The `posedge` (positive edge) of the clock triggers the execution of statements within the `always` block, corresponding to a transition from low to high voltage.
-
-- **Negedge Reset:**  
-  The `negedge` (negative edge) of the reset signal asynchronously sets the output to zero, regardless of the clock.
-
-- **Operators and Lexical Conventions:**  
-  Operators such as `~` (bitwise NOT) and `!` (logical NOT) are used in Verilog. The chart below summarizes various operators and conventions:
-
-  <p align="center">
-    <img src="images/lex.jpg" alt="Verilog Operators and Lexical Conventions">
-  </p>
-
-- **Loops:**  
-  Verilog supports control structures such as `for`, `if-else`, and `while`, similar to C. These structures use `begin` and `end` to define statement blocks.
-
-- **Blocking and Non-Blocking Assignments:**
-  - **Blocking (`=`):** Statements execute sequentially.
-  - **Non-Blocking (`<=`):** Statements execute concurrently.  
-    For example:
-    ```
-    a = b;
-    b = a;
-    ```
-    Both `a` and `b` will have the value of `b`.  
-    Using non-blocking assignment:
-    ```
-    a <= b;
-    b <= a;
-    ```
-    The values are swapped simultaneously.
-
----
-
-## 2. Counter
-
-The Verilog code for a counter is provided below, with explanations for each part:
-
-<p align="center">
-  <img src="images/c.jpg" alt="Counter Verilog Code">
-</p>
-
-### Additional Notes
-
-- **Assign Statement:**  
-  The `assign` keyword is used for continuous assignment. For example, `assign Q = tmp;` ensures that `Q` is updated immediately whenever `tmp` changes, regardless of execution sequence.
-
----
-
-## 3. T-Flip Flop Using D-Flip Flop
-
-The Verilog code for implementing a T-Flip Flop using a D-Flip Flop is shown below:
-
-<p align="center">
-  <img src="images/td.jpg" alt="T-Flip Flop using D-Flip Flop Verilog Code">
-</p>
-
-### Key Concepts
-
-- **Module Instantiation:**  
-  Modules are not defined within other modules; instead, they are instantiated (called) as needed. The module is referenced by its original name, but each instance must have a unique identifier. For example, the module `D_FF` is instantiated as `dff0`.
-
-- **Verilog Primitives:**  
-  Verilog provides built-in primitives such as `not`. In `not (d, q);`, `d` is the output and `q` is the input.
-
-- **Compiler Directives and System Tasks:**  
-  While not used in the above examples, Verilog supports compiler directives and system tasks for advanced functionality. Refer to the flowcharts below for more information:
-
-  <p align="center">
-    <img src="images/task.jpg" alt="Verilog System Tasks">
-  </p>
-  <p align="center">
-    <img src="images/direc.jpg" alt="Verilog Compiler Directives">
-  </p>
-
----
-
-## Binary Multiplier
+### Introduction to Binary Multiplication
 
 Binary multiplication is performed similarly to decimal multiplication. Starting with the least significant bit, the multiplicand is multiplied by each bit of the multiplier, producing partial products. Each partial product is shifted left according to its position, and the sum of all partial products yields the final result.
 
 ### 2-Bit Multiplier
 
-Consider the multiplication of two 2-bit binary numbers. Let B1 and B0 be the multiplicand bits, A1 and A0 the multiplier bits, and C3 C2 C1 C0 the product bits. Multiplying B1 B0 by A0 produces the first partial product. Each bit multiplication (e.g., A0 and B0) is equivalent to an AND operation, so AND gates are used to generate the partial products. Multiplying B1 B0 by A1 and shifting left by one position gives the second partial product. The two partial products are then added using half-adder (HA) circuits.
+Consider the multiplication of two 2-bit binary numbers:
+- Let $B_1B_0$ be the multiplicand bits
+- Let $A_1A_0$ be the multiplier bits
+- Let $C_3C_2C_1C_0$ be the product bits
 
-<p align="center">
-  <img src="images/2bit1.png" alt="2-Bit Multiplier Partial Products">
-</p>
+The multiplication process involves:
+1. Multiplying $B_1B_0$ by $A_0$ to get the first partial product
+2. Multiplying $B_1B_0$ by $A_1$ and shifting left by one position to get the second partial product
+3. Adding the partial products using half-adders
 
-<p align="center">
-  <em>Circuit diagram for 2-bit multiplier using half adders and AND gates</em>
-</p>
+#### Truth Table
 
-<p align="center">
-  <img src="images/2bit2.png" alt="2-Bit Multiplier Circuit Diagram">
-</p>
+| $A_1$ | $A_0$ | $B_1$ | $B_0$ | $C_3$ | $C_2$ | $C_1$ | $C_0$ |
+|-------|-------|-------|-------|-------|-------|-------|-------|
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 |
+
+#### Verilog Implementation
+
+```verilog
+module multiplier_2bit(
+    input [1:0] A,    // Multiplier
+    input [1:0] B,    // Multiplicand
+    output [3:0] C    // Product
+);
+    // Partial products
+    wire [1:0] pp0, pp1;
+    
+    // Generate partial products
+    assign pp0 = A[0] ? B : 2'b00;
+    assign pp1 = A[1] ? B : 2'b00;
+    
+    // Add partial products
+    assign C = {1'b0, pp1} + {2'b00, pp0};
+endmodule
+```
 
 ### 4-Bit Multiplier
 
-A 4-bit multiplier multiplies two 4-bit binary numbers, producing a maximum product of 225 (i.e., 15 × 15). Let the multiplicand be A3 A2 A1 A0, the multiplier B3 B2 B1 B0, and the product P7 P6 P5 P4 P3 P2 P1 P0.
+A 4-bit multiplier multiplies two 4-bit binary numbers, producing a maximum product of 225 (i.e., $15 \times 15$). Let:
+- $A_3A_2A_1A_0$ be the multiplicand
+- $B_3B_2B_1B_0$ be the multiplier
+- $P_7P_6P_5P_4P_3P_2P_1P_0$ be the product
 
-In a 4×4 multiplier, there are four partial products, each generated by multiplying the multiplicand by one bit of the multiplier and shifting accordingly. These partial products are summed to obtain the final product. The addition can be performed using single-bit adders (half-adders and full-adders), but the design becomes complex as the number of bits increases.
+#### Verilog Implementation
 
-<p align="center">
-  <img src="images/4bitmultiplier.png" alt="4-Bit Multiplier Circuit Diagram">
-</p>
+```verilog
+module multiplier_4bit(
+    input [3:0] A,    // Multiplier
+    input [3:0] B,    // Multiplicand
+    output [7:0] P    // Product
+);
+    // Partial products
+    wire [3:0] pp0, pp1, pp2, pp3;
+    
+    // Generate partial products
+    assign pp0 = A[0] ? B : 4'b0000;
+    assign pp1 = A[1] ? B : 4'b0000;
+    assign pp2 = A[2] ? B : 4'b0000;
+    assign pp3 = A[3] ? B : 4'b0000;
+    
+    // Add partial products with proper shifting
+    assign P = ({4'b0000, pp0}) +
+               ({3'b000, pp1, 1'b0}) +
+               ({2'b00, pp2, 2'b00}) +
+               ({1'b0, pp3, 3'b000});
+endmodule
+```
 
-### Shift Multiplier
+### Shift-and-Add Multiplier
 
-The shift-and-add multiplier algorithm is similar to the manual multiplication method. It is commonly used in computers for multiplying large binary numbers, such as 32-bit values, where designing a direct combinational circuit is impractical. The algorithm processes the multiplier bits from least significant to most significant, recursively shifting and adding partial products.
+The shift-and-add algorithm is used for multiplying large binary numbers. It processes the multiplier bits from least significant to most significant, recursively shifting and adding partial products.
 
-<p align="center">
-  <img src="images/shiftmultiplier.png" alt="Shift-and-Add Multiplier">
-</p>
+#### Algorithm Steps:
+1. Initialize result to 0
+2. For each bit of multiplier:
+   - If bit is 1, add multiplicand to result
+   - Shift multiplicand left by 1
+3. Result contains the final product
+
+#### Verilog Implementation
+
+```verilog
+module shift_add_multiplier(
+    input [3:0] A,    // Multiplier
+    input [3:0] B,    // Multiplicand
+    output [7:0] P    // Product
+);
+    reg [7:0] result;
+    integer i;
+    
+    always @(*) begin
+        result = 8'b0;
+        for(i = 0; i < 4; i = i + 1) begin
+            if(A[i])
+                result = result + (B << i);
+        end
+    end
+    
+    assign P = result;
+endmodule
+```
+
+### Design Considerations
+
+#### 1. Timing Analysis
+- Critical path delay through adders
+- Maximum clock frequency: $f_{max} = \frac{1}{t_{setup} + t_{cq}}$
+- Propagation delay through multiplier chain
+
+#### 2. Power Consumption
+- Dynamic power: $P_{dynamic} = \alpha \cdot C \cdot V_{dd}^2 \cdot f$
+- Static power: $P_{static} = I_{leakage} \cdot V_{dd}$
+- Power optimization through clock gating
+
+#### 3. Area Optimization
+- Minimize number of adders
+- Optimize partial product generation
+- Consider trade-off between speed and area
+
+### Applications
+
+1. **Arithmetic Operations**
+   - Digital signal processing
+   - Computer arithmetic units
+   - Scientific computing
+
+2. **Control Systems**
+   - Digital filters
+   - PID controllers
+   - Signal processing
+
+3. **Data Processing**
+   - Image processing
+   - Audio processing
+   - Communication systems
+
+### Implementation Tips
+
+1. **Design Approach**
+   - Choose appropriate multiplier size
+   - Consider speed vs. area trade-off
+   - Implement proper error handling
+
+2. **Verification**
+   - Test all input combinations
+   - Verify timing constraints
+   - Check power consumption
+
+3. **Optimization**
+   - Minimize gate count
+   - Reduce critical path
+   - Optimize power consumption
+
+> **Note:** This theory guide focuses on the fundamental concepts of multiplier design and implementation. For practical implementation steps, refer to the procedure.md file.
