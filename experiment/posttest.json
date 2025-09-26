@@ -2,38 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "In Verilog, what is the purpose of the 'input' keyword when used in the context of a 2-bit Multiplier design?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To declare an output signal",
+        "b": "To indicate a signal to be used as an input",
+        "c": "To declare a constant value",
+        "d": "To define a parameter for the module"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The 'input' keyword in Verilog specifically designates an input signal.",
+        "b": "Correct! The 'input' keyword in Verilog is used to indicate a signal as an input.",
+        "c": "Incorrect. 'input' doesn't declare a constant value within a module.",
+        "d": "Incorrect. 'input' is not used to define parameters for the module."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What does the 'assign' keyword do in Verilog in the context of a 2-bit Multiplier?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Defines a new variable",
+        "b": "Specifies a conditional statement",
+        "c": "Assigns a value to a net",
+        "d": "Initiates a for loop"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. 'assign' keyword in Verilog doesn't define new variables.",
+        "b": "Incorrect. 'assign' is not used to specify conditional statements.",
+        "c": "Correct! 'assign' in Verilog assigns a value to a net within the code.",
+        "d": "Incorrect. 'assign' doesn't initiate for loops."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of the 'reg' keyword in a Verilog module for a 2-bit Multiplier?",
+      "answers": {
+        "a": "To declare combinational logic",
+        "b": "To create sequential storage elements",
+        "c": "To define a module hierarchy",
+        "d": "To generate random numbers"
+      },
+      "explanations": {
+        "a": "Incorrect. 'reg' is not specifically used to declare combinational logic.",
+        "b": "Correct! 'reg' in Verilog is used to create sequential storage elements such as registers.",
+        "c": "Incorrect. 'reg' doesn't specifically define a module hierarchy.",
+        "d": "Incorrect. 'reg' doesn't generate random numbers."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How is multiplication usually implemented in Verilog for a 2-bit Multiplier?",
+      "answers": {
+        "a": "Using only logical AND gates",
+        "b": "Combination of shifts and adds",
+        "c": "Exclusively through addition operations",
+        "d": "Using XOR gates in a sequential manner"
+      },
+      "explanations": {
+        "a": "Incorrect. Multiplication in Verilog is not accomplished solely through logical AND gates.",
+        "b": "Correct! Multiplication is usually implemented in Verilog using a combination of shifts and adds.",
+        "c": "Incorrect. While addition can be a part of the multiplication, it's not the exclusive method.",
+        "d": "Incorrect. Using XOR gates in sequence isn't a typical method for multiplication in Verilog."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Explain the use of 'always @(*)' in a Verilog module for a 2-bit Multiplier.",
+      "answers": {
+        "a": "It triggers the always block based on an event",
+        "b": "Indicates a procedural assignment in the module",
+        "c": "Designates the always block as a combinatorial logic",
+        "d": "Specifies a clock signal for the module"
+      },
+      "explanations": {
+        "a": "Correct! 'always @(*)' in Verilog triggers the always block based on any change in the signals inside the block.",
+        "b": "Incorrect. 'always @(*)' doesn't specify procedural assignments.",
+        "c": "Incorrect. 'always @(*)' does not explicitly designate the block as combinatorial logic.",
+        "d": "Incorrect. 'always @(*)' does not specify a clock signal for the module."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is a 'blocking assignment' in Verilog, and how is it applied in a 2-bit Multiplier module?",
+      "answers": {
+        "a": "Blocking assignments specify a sequential order of execution",
+        "b": "Blocking assignments allow parallel execution of code",
+        "c": "Blocking assignments force a specific sequence of assignment statements",
+        "d": "Blocking assignments permit concurrent execution of assignments"
+      },
+      "explanations": {
+        "a": "Correct! Blocking assignments in Verilog specify a sequential order of execution for assignment statements.",
+        "b": "Incorrect. Blocking assignments do not allow parallel execution.",
+        "c": "Incorrect. Blocking assignments don't force a specific sequence; they execute sequentially.",
+        "d": "Incorrect. Blocking assignments do not permit concurrent execution."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Describe the use of 'parameter' in Verilog modules for a 2-bit Multiplier.",
+      "answers": {
+        "a": "To define local variables within a module",
+        "b": "To specify constants that can be overridden during instantiation",
+        "c": "To control the execution flow within the module",
+        "d": "To determine the number of clock cycles for the module"
+      },
+      "explanations": {
+        "a": "Incorrect. 'parameter' doesn't define local variables within a module.",
+        "b": "Correct! 'parameter' in Verilog specifies constants that can be overridden during module instantiation.",
+        "c": "Incorrect. 'parameter' does not control the execution flow within the module.",
+        "d": "Incorrect. 'parameter' does not determine the number of clock cycles for the module."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Explain the significance of 'wire' in a Verilog module used for a 2-bit Multiplier.",
+      "answers": {
+        "a": "Wire represents combinational logic elements",
+        "b": "Wire is used for behavioral modeling",
+        "c": "Wire designates clock signals",
+        "d": "Wire is a net connecting components"
+      },
+      "explanations": {
+        "a": "Incorrect. 'wire' does not represent combinational logic elements specifically.",
+        "b": "Incorrect. 'wire' is not primarily used for behavioral modeling.",
+        "c": "Incorrect. 'wire' does not specifically designate clock signals.",
+        "d": "Correct! 'wire' in Verilog is a net used to connect components within a module."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the role of 'generate' in Verilog when used in a 2-bit Multiplier module?",
+      "answers": {
+        "a": "Generates test vectors for simulation",
+        "b": "Allows dynamic generation of hardware structures",
+        "c": "Generates random numbers within the module",
+        "d": "Generates clock signals for the module"
+      },
+      "explanations": {
+        "a": "Incorrect. 'generate' is not used to generate test vectors.",
+        "b": "Correct! 'generate' in Verilog allows dynamic generation of hardware structures within a module.",
+        "c": "Incorrect. 'generate' does not generate random numbers.",
+        "d": "Incorrect. 'generate' does not generate clock signals."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }
