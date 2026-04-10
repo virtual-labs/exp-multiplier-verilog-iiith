@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is Verilog used for in digital design?",
+      "answers": {
+        "a": "To describe electronic systems",
+        "b": "To write web applications",
+        "c": "To design mechanical structures",
+        "d": "To create 3D animations"
+      },
+      "explanations": {
+        "a": "Correct! Verilog is a hardware description language used to describe electronic systems.",
+        "b": "Incorrect. Verilog is not used for writing web applications.",
+        "c": "Incorrect. Verilog is not used for designing mechanical structures.",
+        "d": "Incorrect. Verilog is not used for creating 3D animations."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of a 2-bit Multiplier in digital circuits?",
+      "answers": {
+        "a": "To add two 2-bit numbers",
+        "b": "To multiply two 2-bit numbers",
+        "c": "To divide two 2-bit numbers",
+        "d": "To perform logical AND operation on two 2-bit numbers"
+      },
+      "explanations": {
+        "a": "Incorrect. A 2-bit Multiplier is used for multiplication, not addition.",
+        "b": "Correct! A 2-bit Multiplier is used to multiply two 2-bit numbers.",
+        "c": "Incorrect. A 2-bit Multiplier is used for multiplication, not division.",
+        "d": "Incorrect. A 2-bit Multiplier performs multiplication, not logical AND operation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does Verilog's 'always' block define?",
+      "answers": {
+        "a": "Sequential logic",
+        "b": "Combinational logic",
+        "c": "Behavioral modeling",
+        "d": "Loop structures"
+      },
+      "explanations": {
+        "a": "Incorrect. 'always' block can define both sequential and combinational logic.",
+        "b": "Incorrect. 'always' block can define both sequential and combinational logic.",
+        "c": "Correct! The 'always' block is used for behavioral modeling in Verilog.",
+        "d": "Incorrect. Verilog 'always' block is not used for loop structures."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In Verilog, what does the 'wire' keyword represent?",
+      "answers": {
+        "a": "An input signal",
+        "b": "A constant value",
+        "c": "A bidirectional signal",
+        "d": "A net for connecting components"
+      },
+      "explanations": {
+        "a": "Incorrect. 'wire' is not specifically used to represent an input signal.",
+        "b": "Incorrect. 'wire' does not specifically represent a constant value.",
+        "c": "Incorrect. 'wire' does not represent a bidirectional signal in Verilog.",
+        "d": "Correct! 'wire' is a net used to connect components in Verilog."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What are the basic building blocks used in designing a 2-bit Multiplier?",
+      "answers": {
+        "a": "Registers",
+        "b": "Adders and multipliers",
+        "c": "Logic gates",
+        "d": "Flip-flops"
+      },
+      "explanations": {
+        "a": "Incorrect. Registers may be used but are not the basic building blocks of a 2-bit Multiplier.",
+        "b": "Incorrect. Adders and multipliers are used in a Multiplier but not the basic building blocks.",
+        "c": "Correct! Logic gates are the fundamental building blocks used in designing a 2-bit Multiplier.",
+        "d": "Incorrect. Flip-flops are not the primary building blocks for a 2-bit Multiplier."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Explain the purpose of the 'generate' block in Verilog.",
+      "answers": {
+        "a": "To create hardware structures dynamically",
+        "b": "To generate random numbers",
+        "c": "To execute procedural code",
+        "d": "To define module instantiation"
+      },
+      "explanations": {
+        "a": "Correct! The 'generate' block is used to create hardware structures dynamically in Verilog.",
+        "b": "Incorrect. The 'generate' block doesn't generate random numbers.",
+        "c": "Incorrect. The 'generate' block is not used to execute procedural code.",
+        "d": "Incorrect. Defining module instantiation is not the main purpose of the 'generate' block."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What are the differences between blocking and non-blocking assignments in Verilog?",
+      "answers": {
+        "a": "Blocking assignments occur simultaneously while non-blocking assignments occur sequentially.",
+        "b": "Blocking assignments are used in combinational logic, non-blocking in sequential logic.",
+        "c": "Blocking assignments force a specific sequence, non-blocking allow concurrent execution.",
+        "d": "Blocking assignments are used with numbers, non-blocking with strings."
+      },
+      "explanations": {
+        "a": "Incorrect. Blocking assignments occur sequentially while non-blocking assignments occur simultaneously.",
+        "b": "Incorrect. Their usage is not specifically tied to combinational or sequential logic.",
+        "c": "Correct! Blocking assignments enforce a sequence, non-blocking allow concurrent execution.",
+        "d": "Incorrect. Blocking and non-blocking assignments are not limited to specific data types."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Explain the concept of 'race condition' in digital circuits and its relevance to Verilog design.",
+      "answers": {
+        "a": "It represents a competition between different modules for resources in Verilog design.",
+        "b": "Race condition occurs when two operations depend on each other's output.",
+        "c": "It's a conflict situation in which the output depends on the sequence of operations.",
+        "d": "Race condition is a design error that is irrelevant in Verilog."
+      },
+      "explanations": {
+        "a": "Incorrect. Race conditions do not refer to competition between modules.",
+        "b": "Incorrect. This definition is not specific to the concept of race condition.",
+        "c": "Correct! A race condition is a conflict that occurs due to the sequence of operations in Verilog design.",
+        "d": "Incorrect. Race conditions are significant in Verilog design as they can lead to design errors."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is meant by 'sensitivity list' in Verilog and its usage in module behavior?",
+      "answers": {
+        "a": "A list of module inputs for testbench simulations",
+        "b": "A list of inputs triggering module execution",
+        "c": "A list of procedural statements within a module",
+        "d": "A list of module outputs for simulation observations"
+      },
+      "explanations": {
+        "a": "Incorrect. Sensitivity list is not specifically related to testbench inputs.",
+        "b": "Correct! Sensitivity list includes inputs that trigger the execution of the module.",
+        "c": "Incorrect. A sensitivity list is not a list of procedural statements.",
+        "d": "Incorrect. Sensitivity list doesn't primarily involve module outputs for observation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Explain the significance of RTL (Register-Transfer Level) in Verilog design and its relation to hardware description.",
+      "answers": {
+        "a": "RTL describes the transfer of data between registers in hardware circuits.",
+        "b": "RTL is used for random testing of Verilog designs.",
+        "c": "RTL defines high-level behavior of Verilog modules.",
+        "d": "RTL is an irrelevant concept in Verilog design."
+      },
+      "explanations": {
+        "a": "Correct! RTL describes the transfer of data between registers in hardware circuits.",
+        "b": "Incorrect. RTL is not specifically used for random testing.",
+        "c": "Incorrect. RTL doesn't define high-level behavior but rather the data transfer at a specific level.",
+        "d": "Incorrect. RTL is an essential concept in Verilog design for specifying hardware circuits."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}
